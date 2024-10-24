@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .article-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .article-content {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .text-center {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Will You Thrive Today?</h1>
+       
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="article-card">
+                    <div class="article-title">Chronic Diseases</div>
+                    <div class="article-content">
+                        Chronic diseases are long-lasting conditions that can be controlled but not cured. Examples include diabetes, heart disease, and asthma. Regular check-ups and healthy lifestyle choices are essential for managing these conditions effectively.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="article-card">
+                    <div class="article-title">Prevention Tips</div>
+                    <div class="article-content">
+                        Prevention is key in managing chronic diseases. Maintaining a balanced diet, regular exercise, avoiding smoking, and managing stress can significantly reduce the risk of developing chronic conditions.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="article-card">
+                    <div class="article-title">Treatment Options</div>
+                    <div class="article-content">
+                        Treatment for chronic diseases may include medications, lifestyle changes, and therapy. It's crucial to follow your doctor's advice and have regular follow-ups to monitor your health.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-primary" asp-action="Index2">Chat with Doctor</a>
+            <a class="btn btn-primary" asp-action="Index3">Chat with Bot Doc</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

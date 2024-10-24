@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9ecef; /* لون خلفية الصفحة */
+        }
+
+        .chat-container {
+            background-color: white; /* لون خلفية المحادثة */
+            border-radius: 10px; /* زوايا دائرية */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل عميق */
+            padding: 20px;
+            max-width: 600px; /* عرض محادثة محدد */
+            margin: auto; /* توسيط المحادثة */
+            margin-top: 50px; /* مساحة فوق */
+            display: flex;
+            flex-direction: column; /* لترتيب العناصر عمودياً */
+            height: 500px; /* ارتفاع محدد للواجهة */
+        }
+
+        .message-list {
+            flex: 1; /* يجعل القائمة تأخذ المساحة المتاحة */
+            max-height: 400px; /* ارتفاع محدد للقائمة */
+            overflow-y: auto; /*Scrollbar عند الحاجة */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* إطار بسيط */
+            border-radius: 5px; /* زوايا دائرية للإطار */
+            background-color: #f8f9fa; /* لون خلفية قائمة الرسائل */
+            display: flex;
+            flex-direction: column-reverse; /* جعل الرسائل تبدأ من الأسفل */
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #007bff; /* لون خلفية الرسالة */
+            color: white; /* لون نص الرسالة */
+            margin-bottom: 10px; /* مسافة بين الرسائل */
+            max-width: 80%; /* عرض الرسالة محدد */
+            align-self: flex-start; /* محاذاة الرسائل لليسار */
+        }
+
+        .btn-send {
+            background-color: #28a745; /* لون زر الإرسال */
+            color: white; /* لون النص */
+        }
+
+            .btn-send:hover {
+                background-color: #218838; /* لون الزر عند التحويم */
+            }
+
+        .input-container {
+            position: relative; /* لوضع العناصر بشكل مناسب */
+            margin-top: 10px; /* مساحة فوق */
+        }
+
+            .input-container textarea {
+                resize: none; /* منع تغيير حجم مربع النص */
+            }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <h4 class="text-center">Chat Room</h4>
+        <div class="message-list" id="list">
+            <!-- Messages will appear here -->
+            <div class="message">Welcome to the chat!</div>
+        </div>
+        <div class="form-group input-container">
+            <label for="txtUser">Name:</label>
+            <input type="text" id="txtUser" class="form-control" placeholder="Your Name" />
+        </div>
+        <div class="form-group">
+            <label for="txtMessage">Message:</label>
+            <textarea rows="3" id="txtMessage" class="form-control" placeholder="Type your message..."></textarea>
+        </div>
+        <button type="submit" id="btnSend" class="btn btn-send btn-block">Send</button>
+    </div>
+
+    <!-- Adding necessary script files -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/aspnet/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@model loginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @using Doctor.presentation.WebAPP.ViewModel;
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow-lg rounded">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Login to Your Account</h2>
+
+                    
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.ErrorMessage
+                        </div>
+                    }
+
+                    <form asp-action="savelogin" asp-controller="Account" method="post">
+                        <div class="mb-3">
+                            <label for="UserName" class="form-label">User Name</label>
+                            <input id="UserName" name="UserName" class="form-control" type="text" placeholder="Enter your username" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password" class="form-label">Password</label>
+                            <input id="Password" name="Password" class="form-control" type="password" placeholder="Enter your password" required />
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Log In</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a asp-action="ForgetPassword" asp-controller="Account" class="text-muted">Forget Password?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="text-muted">Don't have an account? <a asp-action="Register" asp-controller="Account">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa; 
+        font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+        border-radius: 15px; 
+    }
+
+    .form-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .btn-success {
+        background-color: #28a745; 
+        border-color: #28a745;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            color: #fff; 
+        }
+
+    .text-muted {
+        color: #6c757d; 
+    }
+
+        .text-muted a {
+            text-decoration: underline;  
+        }
+
+            .text-muted a:hover {
+                color: #28a745;  
+            }
+             
+    h2 {
+        color: #333; 
+    }
+
+    /* تصميم رسالة الخطأ */
+    .alert {
+        margin-bottom: 20px;  
+        border-radius: 10px;  
+    }
+</style>

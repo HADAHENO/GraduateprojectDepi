@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Enter User ID";
+}
+
+<!-- Form container -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Enter Your User ID</h2>
+
+    <div class="card p-4 shadow-lg">
+        <form asp-action="EnterUserId" method="post">
+            <div class="mb-3">
+                <label for="userId" class="form-label">User ID:</label>
+                <input type="number" name="userId" id="userId" class="form-control shadow-sm" placeholder="Enter your User ID" required />
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg shadow-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* إضافة تباعد مناسب بين العناصر */
+    .container {
+        max-width: 500px; /* تحديد عرض الحاوية */
+    }
+
+    .form-label {
+        font-weight: bold; /* جعل نص التسمية أكثر بروزًا */
+    }
+
+    .form-control {
+        transition: box-shadow 0.3s; /* إضافة تأثير التحويل */
+    }
+
+        .form-control:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* تأثير التركيز */
+            border-color: #007bff; /* لون الحدود عند التركيز */
+        }
+</style>

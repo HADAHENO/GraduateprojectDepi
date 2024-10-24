@@ -1,0 +1,43 @@
+﻿@model Doctor.Model.App.ApplicationUser
+
+<div class="container mt-5">
+    <div class="card p-4 shadow-lg">
+        <h2 class="text-center mb-4">Your Profile</h2>
+
+        <div class="profile-info">
+            <p><strong>User ID:</strong> <span class="text-muted">@Model.Id</span></p>
+            <p><strong>Username:</strong> <span class="text-muted">@Model.UserName</span></p>
+            <p><strong>Email:</strong> <span class="text-muted">@Model.Email</span></p>
+            <p><strong>Phone Number:</strong> <span class="text-muted">@Model.PhoneNumber</span></p>
+        </div>
+
+        <!-- Display success message if the update was successful -->
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success mt-3">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <!-- Link to edit profile -->
+        <div class="text-center mt-4">
+            <a href="@Url.Action("EditProfile", "Profile", new { id = Model.Id })" class="btn btn-primary btn-lg">Edit Profile</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .profile-info p {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 10px 0;
+    }
+
+        .profile-info p:last-child {
+            border-bottom: none; /* Remove the border for the last item */
+        }
+
+    .card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+</style>

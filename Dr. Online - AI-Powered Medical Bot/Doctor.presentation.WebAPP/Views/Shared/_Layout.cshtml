@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Doctor</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CompanySd.Presentation.WebApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-b3WbP+3qNLn2OBfuQ2fs1HAAZg09aDkB9M3FQX6SQ51Uhi+NR3Ls/YGJgTYM1fML" crossorigin="anonymous" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #e9ecef;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .nav-link {
+            color: #495057;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+            .nav-link:hover {
+                color: #007bff;
+                background-color: rgba(0, 123, 255, 0.1);
+            }
+
+        .container {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+            footer a {
+                color: #f8f9fa;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+            .social-icons a {
+                color: #f8f9fa;
+                margin-right: 15px;
+                font-size: 1.5rem;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Doctor</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Home/Index"><i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Profile" asp-action="EnterUserId"><i class="fas fa-user"></i> Enter User ID</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Users" asp-action="Create"><i class="fas fa-user-plus"></i> Create User</a>
+                            </li>
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Account/logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Account/login"><i class="fas fa-sign-in-alt"></i> Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Account/Register"><i class="fas fa-user-plus"></i> Register</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container my-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            <p>&copy; 2024 - Doctor - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
