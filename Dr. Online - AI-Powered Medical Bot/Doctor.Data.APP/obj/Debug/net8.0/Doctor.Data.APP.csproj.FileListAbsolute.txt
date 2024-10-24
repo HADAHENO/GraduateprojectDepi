@@ -1,0 +1,17 @@
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\bin\Debug\net8.0\Doctor.Data.APP.deps.json
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\bin\Debug\net8.0\Doctor.Data.APP.dll
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\bin\Debug\net8.0\Doctor.Data.APP.pdb
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\bin\Debug\net8.0\Doctor.Model.App.dll
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\bin\Debug\net8.0\Doctor.Model.App.pdb
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.csproj.AssemblyReference.cache
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.AssemblyInfoInputs.cache
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.AssemblyInfo.cs
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.csproj.CoreCompileInputs.cache
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.D.ADF30108.Up2Date
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.dll
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\refint\Doctor.Data.APP.dll
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.pdb
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\ref\Doctor.Data.APP.dll
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\bin\Debug\net8.0\Doctor.Data.APP.runtimeconfig.json
+D:\PROJECTSC#\graduateProject\Doctor.Data.APP\obj\Debug\net8.0\Doctor.Data.APP.genruntimeconfig.cache
